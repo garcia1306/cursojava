@@ -16,7 +16,7 @@ alert("el precio que debes pagar es $" + resultado)
 
 
 let ingresatalle = prompt("Ingresa el talle que quieres llevar")
-let talles = "S s M m L l XL xl XXL xxl"
+let talles ="S s M m L l XL xl XXL xxl"
 
 if( ingresotalle = talles){
     alert("estamos preparando tu pedido");
