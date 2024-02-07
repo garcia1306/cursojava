@@ -36,6 +36,17 @@
     margin-left: 33%;
 }
 
+
+.links{
+    color: #262323;
+    font-family: "Julius Sans One", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    font-size: 180%;
+}
+
+
 /*---------------------BODY-----------------------------*/
 
 main{
@@ -43,9 +54,34 @@ main{
     height: 100vh;
 }
 
+
+.carrusel{
+    display: flex;
+    width: 60%;
+    height: 86%;
+    margin-left: 23%;
+    
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: .5 ease;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 400px;
+    filter: contrast(100%);
+}
+
 .remeras{
     background-color:#F8F0F0; 
     font-family: "Julius Sans One", sans-serif;
+    margin-top: 200px;
 }
 
 .remenegra{
