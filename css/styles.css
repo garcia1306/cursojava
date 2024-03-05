@@ -55,6 +55,17 @@ main{
 }
 
 
+.formulario{
+    color: #F8F0F0;
+    font-size: 200%;
+    margin-left: 50%;
+}
+
+.formulario button{
+    font-size: 70%;
+    color: #262323;
+}
+
 .carrusel{
     display: flex;
     width: 60%;

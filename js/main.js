@@ -1,4 +1,4 @@
-let ingreso = parseInt(prompt("Ingresa la cantidad de remeras que deseas comprar")) ;
+/*let ingreso = parseInt(prompt("Ingresa la cantidad de remeras que deseas comprar")) ;
 
 for (let i = 15; i <= 15; i++){
 let resultado = ingreso * i
@@ -24,3 +24,23 @@ if( ingresotalle = talles){
 else{
     alert("talle no encontrado")
 }
+
+
+*/
+// Valores predefinidos para el usuario y la contraseña
+var usuarioCorrecto = "Tomas";
+var contraseñaCorrecta = "Garcia";
+
+function iniciarSesion() {
+    var usuario = prompt("Introduce tu usuario:");
+    var contraseña = prompt("Introduce tu contraseña:");
+
+    // Verifica si el usuario y la contraseña son correctos
+    if (usuario === usuarioCorrecto && contraseña === contraseñaCorrecta) {
+        alert("Inicio de sesión exitoso. ¡Bienvenido, " + usuario + "!");
+    } else {
+        alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
+    }
+}
+
+
