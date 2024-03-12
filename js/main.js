@@ -1,46 +1,69 @@
-/*let ingreso = parseInt(prompt("Ingresa la cantidad de remeras que deseas comprar")) ;
 
-for (let i = 15; i <= 15; i++){
-let resultado = ingreso * i
+document.addEventListener('DOMContentLoaded', () => {
+    const listaProductos = document.querySelector('#lista-productos');
+    const total = document.querySelector('#total');
+    const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+    const comprarBtn = document.querySelector('#comprar');
+    const listaProductosDisponibles = document.querySelector('#lista-productos-disponibles');
+    let carrito = [];
 
-
-
-console.log("el precio que debes pagar es $" + resultado);
-
-alert("el precio que debes pagar es $" + resultado)
-
-
-
-
-}
-
-
-let ingresatalle = prompt("Ingresa el talle que quieres llevar")
-let talles ="S s M m L l XL xl XXL xxl"
-
-if( ingresotalle = talles){
-    alert("estamos preparando tu pedido");
-}
-else{
-    alert("talle no encontrado")
-}
-
-
-*/
-// Valores predefinidos para el usuario y la contraseña
-var usuarioCorrecto = "Tomas";
-var contraseñaCorrecta = "Garcia";
-
-function iniciarSesion() {
-    var usuario = prompt("Introduce tu usuario:");
-    var contraseña = prompt("Introduce tu contraseña:");
-
-    // Verifica si el usuario y la contraseña son correctos
-    if (usuario === usuarioCorrecto && contraseña === contraseñaCorrecta) {
-        alert("Inicio de sesión exitoso. ¡Bienvenido, " + usuario + "!");
-    } else {
-        alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
+    // Función para agregar un producto al carrito
+    function agregarProducto(e) {
+        if (e.target.classList.contains('agregar-carrito')) {
+            const item = e.target.parentElement;
+            const productoSeleccionado = {
+                id: item.getAttribute('data-id'),
+                nombre: item.textContent.trim().slice(0, -13),
+                precio: parseFloat(item.getAttribute('data-precio'))
+            };
+            carrito.push(productoSeleccionado);
+            mostrarCarrito();
+        }
     }
-}
 
+    // Función para mostrar los productos en el carrito
+    function mostrarCarrito() {
+        listaProductos.innerHTML = '';
+        carrito.forEach((producto, index) => {
+            const { nombre, precio } = producto;
+            const item = document.createElement('li');
+            item.textContent = `${nombre} - $${precio}`;
+            const eliminarBtn = document.createElement('button');
+            eliminarBtn.textContent = 'Eliminar';
+            eliminarBtn.classList.add('eliminar-producto');
+            eliminarBtn.onclick = () => eliminarProducto(index);
+            item.appendChild(eliminarBtn);
+            listaProductos.appendChild(item);
+        });
 
+        // Calcular y mostrar total
+        const precioTotal = carrito.reduce((total, producto) => total + producto.precio, 0);
+        total.textContent = precioTotal.toFixed(2);
+
+        // Habilitar botón de compra si hay productos en el carrito
+        comprarBtn.disabled = carrito.length === 0;
+    }
+
+    // Función para eliminar un producto del carrito
+    function eliminarProducto(index) {
+        carrito.splice(index, 1);
+        mostrarCarrito();
+    }
+
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        carrito = [];
+        mostrarCarrito();
+    }
+
+    // Función para realizar la compra
+    function comprar() {
+        alert('Compra realizada con éxito');
+        vaciarCarrito();
+    }
+
+    // Eventos
+    listaProductosDisponibles.addEventListener('click', agregarProducto);
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    comprarBtn.addEventListener('click', comprar);
+});

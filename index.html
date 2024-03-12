@@ -7,12 +7,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
-    <title>Document</title>
+    <title>MOODIE</title>
 </head>
 <body>
-
-
 
     <header class="headpag">
         <img class="lupita" src="icons/material-symbols--search.svg" alt="">
@@ -29,37 +26,50 @@
     </article>
     </header>
 
-
-    
-
-
     <main>
 
-        <div class="formulario">
-            <h2>Iniciar Sesión</h2>
-            <button onclick ="iniciarSesion()">Iniciar Sesión</button>
-            </div>
-
         <section class="carrusel">
-                <img src="images/WhatsApp Image 2023-11-19 at 23.55.29.jpeg" alt="">
-                <img src="images/WhatsApp Image 2023-11-19 at 23.55.33.jpeg" alt="">
-                <img src="images/WhatsApp Image 2023-11-19 at 23.55.36.jpeg" alt="">
-        </section>
+            <img src="images/WhatsApp Image 2023-11-19 at 23.55.29.jpeg" alt="">
+            <img src="images/WhatsApp Image 2023-11-19 at 23.55.33.jpeg" alt="">
+            <img src="images/WhatsApp Image 2023-11-19 at 23.55.36.jpeg" alt="">
+    </section>
 
 
-        <article class="remeras">
-        <img class="remenegra" src="images/Moodie Remera 2 Frente Sin Fondo (1).png" alt="">
-        <img class="remenegraback" src="images/Moodie Remera 2 Atras Sin Fondo (1).png" alt="">
-        <p class="nombresremes">HATE IS MY MOTIVATOR T-SHIRT</p>
-        <p class="precios">$15</p>
-        <p class="talles">S M L XL XXL</p>
-
-    </article>
-
-    </main>
 
 
+
+    <div id="productos">
+        <h2>Productos</h2>
+        <ul id="lista-productos-disponibles">
+            <img class="remenegra" src="/images/Moodie Remera 2 Frente Sin Fondo (1).png" alt=""><li data-id="1" data-precio="10">REMERA NEGRA OVERSIZE  $10 <button class="agregar-carrito">Agregar al Carrito</button></li>
+            <img class="remeblanca" src="/images/remera_blanca_over-removebg-preview.png" alt=""><li data-id="2" data-precio="20">REMERA BLANCA OVERSIZE $20 <button class="agregar-carrito">Agregar al Carrito</button></li>
+            <img class="rememarron" src="/images/remera_marron_2daopcion-removebg-preview.png" alt=""><li data-id="3" data-precio="30">REMERA MARRON OVERSIZE $30 <button class="agregar-carrito">Agregar al Carrito</button></li>
+        </ul>
+    </div>
+
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-productos"></ul>
+        <p>Total: <span id="total"></span></p>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+        <button id="comprar" disabled>Comprar</button>
+    </div>
+
+
+    <footer>
+        <p class="sub">SUSCRIBITE A NUESTRO NEWSLETTER</p>
+        <input type="text" name="email" placeholder="Email"> 
+        <ul class="footerlista">
+            <li>Inicio</li>
+            <li>Productos</li>
+            <li>Contacto</li>
+            <li>Guia de talles</li>
+        </ul>
     
+        <p class="derechos">Copyright moodie-2023-.Todos los derechos reservados</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
 </html>
