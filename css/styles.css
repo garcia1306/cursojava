@@ -140,7 +140,7 @@ li{
 .agregar-carrito{
     color: #F8F0F0;
     background-color: #262323;
-    margin-left: 3%;
+    margin-left: 40%;
     font-size: 100%;
     padding: 0.8em 1.8em;
     border-radius: 8px;
@@ -175,7 +175,7 @@ li{
 
 footer{
     background-color: #262323;
-    margin-top: 3%;
+    margin-top: 86%;
     height: 50%;
 }
 
@@ -217,4 +217,61 @@ input{
     color: #F8F0F0;
     margin-left: 10%;
     margin-top: 8%;
+}
+
+
+
+/*-----------------------PAGINA REMERAS----------------------------*/
+
+.footshirts{
+    background-color: #262323;
+    margin: 0%;
+    height: 50%;
+}
+
+.subeate{
+    color: #F8F0F0;
+    font-size: 160%;
+    margin-bottom: 10px;
+}
+
+.email{
+    font-size: 160%;
+    text-transform: capitalize;
+
+}
+
+input{
+    font-size: 160%;
+    outline: none;
+    background-color: transparent;
+    border: #F8F0F0  4px solid;
+}
+
+.footerlistashirts{
+    display: flex;
+    color: #F8F0F0;
+    align-items: center;
+    flex-direction: column;
+    font-size: 160%;
+    list-style: none;
+    font-family: "Julius Sans One", sans-serif;
+    margin-left: 10%;
+    gap: 40px;
+    
+}
+
+.derechosremeras{
+    text-align: center;
+    font-size: 160%;
+    color: #F8F0F0;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+/*---------------------BODY-----------------------------*/
+
+.remerasmain{
+    background-color: #262323;
+    height: 20%
 }
