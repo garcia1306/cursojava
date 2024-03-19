@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const listaProductos = document.querySelector('#lista-productos');
     const total = document.querySelector('#total');
@@ -59,6 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para realizar la compra
     function comprar() {
         alert('Compra realizada con éxito');
+        // Exportar carrito a JSON y descargar como archivo
+        const datosJSON = JSON.stringify(carrito);
+        const nombreArchivo = 'carrito.json';
+        const blob = new Blob([datosJSON], { type: 'application/json' });
+        const enlaceDescarga = document.createElement('a');
+        enlaceDescarga.href = URL.createObjectURL(blob);
+        enlaceDescarga.download = nombreArchivo;
+        enlaceDescarga.click();
+
         vaciarCarrito();
     }
 
@@ -67,3 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
     comprarBtn.addEventListener('click', comprar);
 });
+

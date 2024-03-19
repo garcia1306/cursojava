@@ -135,6 +135,8 @@ section img:hover{
 li{
     margin-left: 45%;
     font-size: 160%;
+    list-style: none;
+
 }
 
 .agregar-carrito{
@@ -143,9 +145,10 @@ li{
     margin-left: 40%;
     font-size: 100%;
     padding: 0.8em 1.8em;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #262323;
-    border: 4px solid orange;
+    cursor: pointer;
+
 }
 
 #vaciar-carrito{
@@ -154,9 +157,9 @@ li{
     font-size: 120%;
     margin-left: 5%;
     padding: 0.8em 1.8em;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #262323;
-    border: 4px solid orange;
+    cursor: pointer;
 }
 
 #comprar{
@@ -165,10 +168,13 @@ li{
     font-size: 120%;
     margin-left: 5%;
     padding: 0.8em 1.8em;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #262323;
-    border: 4px solid orange;
+    cursor: pointer;
+
 }
+
+
 
 
 /*-----------------------FOOTER----------------------------*/
